@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_honbab_app/screens/home_screen.dart';
 
-void main() => runApp(MaterialApp(
-      theme: style,
-      home: MyApp(),
-    ));
+void main() => runApp(
+  MaterialApp(
+    theme: style,
+    home: MyApp(),
+  )
+);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -45,8 +47,8 @@ class MyApp extends StatelessWidget {
 }
 
 var style = ThemeData(
-    appBarTheme: AppBarTheme(
-  backgroundColor: Colors.white,
-  titleTextStyle: TextStyle(
-      color: Color(0xff99001C), fontSize: 20, fontWeight: FontWeight.w900),
-));
+  appBarTheme: AppBarTheme(
+    backgroundColor: Colors.white,
+    titleTextStyle: TextStyle(color: Color(0xff99001C), fontSize: 20, fontWeight: FontWeight.w900), 
+  )
+);
