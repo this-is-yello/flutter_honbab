@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_honbab_app/screens/home_screen.dart';
+import 'package:flutter_honbab_app/screens/mypage_screen.dart';
 
 void main() => runApp(
   MaterialApp(
@@ -14,16 +15,39 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 1,
+      length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Center(child: Text('현식')),
+          leading: IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: () {
+
+            },
+          ),
+          title: Center(child: Text('오늘의 집')),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed:() {
+                
+              },
+            ),
+            IconButton(
+              icon: Icon(Icons.shopping_cart_outlined),
+              onPressed: () {
+                
+              },
+            )
+          ],
         ),
         body: TabBarView(
           children: [
             Center(
               child: HomeScreen(),
-            )
+            ),
+            Center(
+              child: MyPageScreen(),
+            ),
           ],
         ),
         bottomNavigationBar: Container(
@@ -31,13 +55,18 @@ class MyApp extends StatelessWidget {
           color: Colors.white,
           child: const TabBar(
               indicatorSize: TabBarIndicatorSize.tab,
+              labelStyle: TextStyle(fontSize: 13),
               indicatorColor: Color(0xff99001C),
               labelColor: Color(0xff99001C),
               unselectedLabelColor: Colors.grey,
               tabs: [
                 Tab(
                   icon: Icon(Icons.home_outlined),
-                  text: 'home',
+                  text: '홈',
+                ),
+                Tab(
+                  icon: Icon(Icons.account_circle_outlined),
+                  text: '마이페이지',
                 ),
               ]),
         ),
@@ -49,6 +78,8 @@ class MyApp extends StatelessWidget {
 var style = ThemeData(
   appBarTheme: AppBarTheme(
     backgroundColor: Colors.white,
-    titleTextStyle: TextStyle(color: Color(0xff99001C), fontSize: 20, fontWeight: FontWeight.w900), 
+    iconTheme: IconThemeData(color: Colors.black, size: 30),
+    titleTextStyle: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.w900),
+    // actionsIconTheme: IconThemeData(color: Colors.black, size: 30),
   )
 );
