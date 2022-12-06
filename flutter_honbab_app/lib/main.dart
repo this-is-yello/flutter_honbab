@@ -4,6 +4,7 @@ import 'package:flutter_honbab_app/screens/mypage_screen.dart';
 
 void main() => runApp(
   MaterialApp(
+    debugShowCheckedModeBanner: false,
     theme: style,
     home: MyApp(),
   )
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
 
             },
           ),
-          title: Center(child: Text('오늘의 집')),
+          // title: Center(child: Text('오늘의 집')),
           actions: [
             IconButton(
               icon: Icon(Icons.search),
@@ -56,8 +57,8 @@ class MyApp extends StatelessWidget {
           child: const TabBar(
               indicatorSize: TabBarIndicatorSize.tab,
               labelStyle: TextStyle(fontSize: 13),
-              indicatorColor: Color(0xff99001C),
-              labelColor: Color(0xff99001C),
+              indicatorColor: Color(0xff00A8E3),
+              labelColor: Color(0xff00A8E3),
               unselectedLabelColor: Colors.grey,
               tabs: [
                 Tab(
