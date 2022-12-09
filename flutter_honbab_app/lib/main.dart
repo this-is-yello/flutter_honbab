@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_honbab_app/screens/home_screen.dart';
 import 'package:flutter_honbab_app/screens/mypage_screen.dart';
+import 'package:flutter_honbab_app/screens/login_screen.dart';
 
 void main() => runApp(
   MaterialApp(
     debugShowCheckedModeBanner: false,
     theme: style,
-    home: MyApp(),
+    home: LoginScreen(),
   )
 );
 
